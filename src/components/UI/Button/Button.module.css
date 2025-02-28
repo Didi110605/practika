@@ -1,0 +1,51 @@
+.btn {
+  border-radius: 6px;
+  font-size: 16px; /* Уменьшен размер шрифта */
+  font-weight: 600;
+  padding-top: 12px; /* Уменьшено верхнее заполнение */
+  padding-bottom: 12px; /* Уменьшено нижнее заполнение */
+  padding-left: 20px; /* Добавлено для уменьшения ширины */
+  padding-right: 20px; /* Добавлено для уменьшения ширины */
+  color: #fff;
+  cursor: pointer;
+  border: none;
+}
+
+.green {
+  background-color: #339933;
+  transition: background-color 0.2s ease-in-out;
+
+  &:hover {
+      background-color: #282828;
+  }
+}
+
+.white {
+  background-color: #fff;
+  color: #282828;
+  transition: background-color 0.2s ease-in-out,
+      color 0.2s ease-in-out;
+
+  &:hover {
+      background-color: #282828;
+      color: #fff;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .btn {
+      font-size: 14px; /* Дополнительное уменьшение шрифта для экранов меньше 1300px */
+  }
+
+  .small {
+      padding-left: 32px; /* Уменьшено заполнение для класса .small */
+      padding-right: 32px; /* Уменьшено заполнение для класса .small */
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .btn {
+      font-size: 12px; /* Уменьшен шрифт для мобильных устройств */
+      padding: 8px 20px; /* Уменьшены отступы для мобильных устройств */
+  }
+}

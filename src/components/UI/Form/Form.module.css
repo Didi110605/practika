@@ -1,0 +1,107 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 26px;
+
+  input {
+    border-radius: 6px;
+    outline: none;
+    padding: 16px 32px;
+    font-size: 20px;
+    width: 100%;
+  }
+}
+
+.inp_wrap {
+  position: relative;
+}
+
+.inp_error {
+  color: #ed0000;
+  font-size: 14px;
+  position: absolute;
+  bottom: -21px;
+}
+.transparent {
+  width: 400px; /* Уменьшено с 520px */
+  margin-left: auto;
+
+  input {
+    background: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+
+    &::placeholder {
+      color: #fff;
+      font-weight: 500;
+    }
+  }
+}
+
+.white {
+  width: 100%; /* Может остаться 100%, если форма занимает всю ширину контейнера */
+  
+  input {
+    background-color: #fff;
+    color: #282828;
+    border: 1px solid #ddd;
+
+    font-size: 18px; /* Уменьшенный размер шрифта */
+    padding: 14px 24px; /* Уменьшенные отступы */
+
+    &::placeholder {
+      color: #8b8b8b;
+    }
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .transparent {
+    width: 100%; /* Робот-проверка для меньших экранов */
+  }
+
+  .white {
+    gap: 4px; /* Уменьшенный отступ между элементами */
+    
+    .inp_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+
+      input {
+        font-size: 14px; /* Уменьшенный размер шрифта на мобильных */
+        padding: 10px 24px; /* Уменьшенные отступы */
+      }
+      
+      .inp_error {
+        font-size: 12px;
+        position: unset;
+      }
+    }
+
+    button {
+      padding: 8px 0; /* Уменьшенный размер кнопки */
+    }
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .transparent {
+    gap: 6px;
+
+    .inp_wrap {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+
+      input {
+        font-size: 12px; /* Уменьшенный размер шрифта на мобильных */
+        padding: 8px 20px; /* Уменьшенные отступы */
+      }
+
+      .inp_error {
+        position: unset;
+      }
+    }
+  }
+}

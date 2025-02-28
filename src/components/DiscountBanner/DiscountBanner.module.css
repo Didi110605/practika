@@ -1,0 +1,16 @@
+.offForm{
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(#0B710B, #339933);
+  color: #FFFFFF;
+  .discountForm{
+    display: flex;
+    justify-content:end;
+    img{
+      width: 60%;
+    }
+  } 
+}
